@@ -38,5 +38,9 @@ Test this app on https://hanchor.herokuapp.com
 *   [Amazon SES](https://aws.amazon.com/ses/)
 *   [Cloudinary](https://aws.amazon.com/ses/https://cloudinary.com/documentation/image_upload_api_reference)
 
+
+## Other projects
+https://github.com/ikechiU?tab=repositories
+
 ## Author
 Ikechi Ucheagwu 
