@@ -48,7 +48,7 @@ public class GratitudeController {
     public GratitudeRest createGratitude(@PathVariable String userId,
                                          @RequestParam(name = "title") String title,
                                          @RequestParam(name = "message") String message,
-                                         @RequestParam(name = "file", required = false) MultipartFile multipartFile) {
+                                         @RequestPart(name = "file") MultipartFile multipartFile) {
 
         checkGratitude(title, message);
         String generatedImageId = utils.generateImageId(5) + System.currentTimeMillis();
@@ -105,7 +105,7 @@ public class GratitudeController {
                                          @RequestParam(name = "title") String title,
                                          @RequestParam(name = "message") String message,
                                          @RequestParam(name = "imageId") String imageId,
-                                         @RequestParam(name = "file", required = false) MultipartFile multipartFile) {
+                                         @RequestPart(name = "file") MultipartFile multipartFile) {
 
         if (imageId.isEmpty())  throw new HanchorServiceException(ErrorMessages.MISSING_REQUIRED_FIELD.getErrorMessage());
         checkGratitude(title, message);
